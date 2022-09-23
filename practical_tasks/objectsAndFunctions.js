@@ -64,8 +64,10 @@ car.color = 'Green';
 car.power = showPower(138);
 
 
-function showPower(a) {
-    console.log(`${a}kW`);
+function showPower(P) {
+    let power = P + "kW";
+    console.log(power);
+    return power;
   };
 
 console.log(car);
