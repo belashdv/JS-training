@@ -23,5 +23,7 @@
 hs_err_pid*
 
 working_folder/
+
 node_modules/
+
 wdio/
