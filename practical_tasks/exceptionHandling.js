@@ -11,7 +11,7 @@ try {
 
 
 try {
-    let b = 1 / 0;
+    1 / 0;
     
 } catch {
     console.log("actually you can and it's Infinity");
