@@ -27,3 +27,5 @@ working_folder/
 node_modules/
 
 wdio/
+
+wdio/test/specs
