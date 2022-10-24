@@ -6,7 +6,7 @@ try {
     console.log(a);
     let a = 3;
 } catch {
-    console.log("'a' must be declared before use");
+    console.log("let must be declared before use");
 };
 
 
