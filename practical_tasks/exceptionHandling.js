@@ -11,10 +11,12 @@ try {
 
 
 try {
-    1 / 0;
-    
-} catch {
-    console.log("actually you can and it's Infinity");
-} finally {
-    console.log("cannot be divided by zero");
-};
+    let a = 1;
+    let b = 0;
+    if (b === 0) {
+        throw new SyntaxError('cannot be divided by zero');
+    }
+    console.log(one / two);
+} catch (error) {
+    console.log(error.message)
+}
