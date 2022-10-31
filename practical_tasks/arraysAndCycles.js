@@ -25,7 +25,7 @@ console.log(greetings);
 //4 Convert numeric array to Boolean
 
 let numArr = [-3, -2, -1, 0, 1, 2, 3];
-let booleanArr = numArr.map(item => Boolean(item));
+let booleanArr = numArr.map(item => !!item);
 console.log(booleanArr);
 
 
@@ -33,7 +33,6 @@ console.log(booleanArr);
 
 let arr = [1,6,7,8,3,4,5,6];
 arr.sort( (a, b) => a - b );
-arr.reverse();
 console.log(arr);
 
 
@@ -46,41 +45,21 @@ console.log(filteredArr);
 //7 Write a function that takes two parameters - an array and a number and outputs the index of an array element equal to a number
 
 function getIndex (array, b) {
-    
     for (let key of array) {
         if (key == b) {
-            let found = array.findIndex(key => key == b)
+            let found = array.findIndex(key => key === b)
             return found;
         }
     }
 }
-
 console.log(getIndex([1,6,7,8,3,4,5,6], 8)); //expected: 3
 
 
 //8 Implement a loop that will print the number 'a' until it is less than 10
 
-// Not sure if I understand the task, so here's a first solution
-
 for (let i = 0; i < 10; i++) {
     console.log(`${i}`);
 };
-
-//and the second:
-
-function theLoop(a) {
-    if (a < 10) {
-        for (let i = 0; i <= a; i++) {
-            console.log(`${i}`);
-        };
-    } else {
-        console.log(`${a} is too big, please choose another number`);
-    };
-}
-
-theLoop(5);
-theLoop(10);
-theLoop(12);
 
 
 //9 Implement a loop that prints prime numbers to the console
@@ -107,7 +86,7 @@ function isPrime(num) {
     return true;
   }
 
-  primeLoop(20);
+primeLoop(20);
 
 
 //10 Implement a loop that prints odd numbers to the console
@@ -123,10 +102,3 @@ function oddNumbersPrinter (a) {
 }
 
 oddNumbersPrinter(10);
-
-//another example
-let i = 0;
-while ((i % 2) != 0) {
-    console.log(i);
-    i++;
-};
